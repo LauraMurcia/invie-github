@@ -1,0 +1,38 @@
+control de versiones : Registra ambios en archivos.
+
+Tipos:
+
+local 		 	-> Depende de donde se esté manejando
+Centralizado 	-> Depende del server donde se almacena el repositorio
+Distribuido		-> Git.
+
+VCS version control system
+
+COMANDOS TERMINAL
+
+mkdir 	crear carpeta
+touch 	crear archivos
+rm 		borrar archivos
+rm -rf 	borrar carpetas
+clear	limpiar
+ls		listar
+
+vim - editor de archivos
+esc + :wq para grabar en archivo
+
+git config -global user.email laura....
+git config -global user "Laura Murcia"
+
+
+git init 					inicializa repositorio
+git status					ver estado (en rojo solo está en el working directory)
+git add[archivo] 			Nos agrega al archivo al staging area
+git rm --cached [archivo] 	Saca archivo de staging area
+git add - A 				Agrega todos los archivos listos en workind directory a staging area
+git rm -f [archivo]			Borra archivo definitivamente 
+git add -n [Archivo]		No hace nada
+git commit -m ["mensaje"]	pasa archivos de staging area a git repository
+git commit --amend			concatena nuevos cambios con anteriores
+git log						visualiza historial de commits realizados
+
+
