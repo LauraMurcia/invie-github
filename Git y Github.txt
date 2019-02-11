@@ -34,5 +34,18 @@ git add -n [Archivo]		No hace nada
 git commit -m ["mensaje"]	pasa archivos de staging area a git repository
 git commit --amend			concatena nuevos cambios con anteriores
 git log						visualiza historial de commits realizados
+git log --oneline			Resumen de commits realizados
+git log --oneline --graph	Nos mostraria los diferentes commits en las ramas o bifurcaciones con un asterisco.
+git log -[x]        		x : cantidad de commmits a ver
+git diff [SHA]				al sha se obtiene al hacer git log --oneline ej:8db3310, Nos muestra las cambios de ese commits
+git diff [XXX-1] [XXX-2]    Muestra las diferencias del commit [XXX-1] contra el commit [XXX-2]
+git reset --soft [sha-1]	[sha-1] desde que commit quitar cambios. Deja los archivos en el staging area, listos para hacer un commit.
+git reset --mixed [sha-1] 	Quita archivos del stagins area y los deja en el working
+git reset --hard [sha1]		 Nos elimina los cambios incluso del working directory, es el más peligroso de todos porque podemos perder parte de nuestro trabajo.
+git config --global core.editor"code --wait"	configurar Visual code como editor de mensaje del commit
+git config --global -e
+			
+
+
 
 
