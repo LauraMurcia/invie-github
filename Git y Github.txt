@@ -42,7 +42,7 @@ git diff [XXX-1] [XXX-2]    Muestra las diferencias del commit [XXX-1] contra el
 git reset --soft [sha-1]	[sha-1] desde que commit quitar cambios. Deja los archivos en el staging area, listos para hacer un commit.
 git reset --mixed [sha-1] 	Quita archivos del stagins area y los deja en el working
 git reset --hard [sha1]		 Nos elimina los cambios incluso del working directory, es el más peligroso de todos porque podemos perder parte de nuestro trabajo.
-git config --global core.editor"code --wait"	configurar Visual code como editor de mensaje del commit
+git config --global core.editor" code --wait"	configurar Visual code como editor de mensaje del commit
 git config --global -e
 git branch [nombre]			Crear rama
 git branch -l 				Listar ramas
@@ -53,6 +53,7 @@ git checkout [nombre_rama]	Mover a esa rama
 git checkout [SHA]			Moverse en el tiempo a ese commmit sin borrar archivos
 git checkout -b [nombre_rama]	Crear rama y navegar a ella
 git merge [rama_a_mezclar]  Se debe estar en rama definitiva
+git rebase [rama_a_mezclar]
 
 
 
