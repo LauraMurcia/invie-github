@@ -52,7 +52,7 @@ git branch -m [Rama_a_renombrar] [nombre_final]	Renombrar rama
 git checkout [nombre_rama]	Mover a esa rama
 git checkout [SHA]			Moverse en el tiempo a ese commmit sin borrar archivos
 git checkout -b [nombre_rama]	Crear rama y navegar a ella
-
+git merge [rama_a_mezclar]  Se debe estar en rama definitiva
 
 
 
