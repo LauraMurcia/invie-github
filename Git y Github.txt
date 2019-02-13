@@ -54,7 +54,19 @@ git checkout [SHA]			Moverse en el tiempo a ese commmit sin borrar archivos
 git checkout -b [nombre_rama]	Crear rama y navegar a ella
 git merge [rama_a_mezclar]  Se debe estar en rama definitiva
 git rebase [rama_a_mezclar]
+git stash					para guardar mmomentaneamente cambios sin hacer commit y poder cambiar libremente de rama
+git stash listar			ver lista de stash
+git stash drop stash@{numero} Borrar stash de la lista
+git stash apply				Aplica cambio (ultimo cambio realizado stash@{0})
+git stash apply stash@{numero}	Aplica ese cambio 
+git stash clear				Elimina todos los stash existentes
+git stash show stash@{num_stash} : Muestra los archivos cambiados en ese stash.
 
+El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
+Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo].
+Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
 
-
-
+git stash pop 						 Aplica el cambio más reciente y elimina el stash.
+git stash pop stash@{num_stash} 	 Aplica los cambios de un stash específico y elimina el stash.
+git checkout --[archivo]			 Quita cambios realizados en ese archivo que no se hayan hecho en commit
+git cherry-pick [SHA]			     cuando hicimos un commit en una rama que no era, creamos la nueva rama y hacemos este comando.
