@@ -34,6 +34,7 @@ git add -n [Archivo]		No hace nada
 git commit -m ["mensaje"]	pasa archivos de staging area a git repository
 git commit --amend			concatena nuevos cambios con anteriores
 git log						visualiza historial de commits realizados
+git tag -a v1.4 -m 'my version 1.4'  Crear tag
 git log --oneline			Resumen de commits realizados
 git log --oneline --graph	Nos mostraria los diferentes commits en las ramas o bifurcaciones con un asterisco.
 git log -[x]        		x : cantidad de commmits a ver
@@ -70,3 +71,24 @@ git stash pop 						 Aplica el cambio más reciente y elimina el stash.
 git stash pop stash@{num_stash} 	 Aplica los cambios de un stash específico y elimina el stash.
 git checkout --[archivo]			 Quita cambios realizados en ese archivo que no se hayan hecho en commit
 git cherry-pick [SHA]			     cuando hicimos un commit en una rama que no era, creamos la nueva rama y hacemos este comando.
+git clone [url]                     CLonar proyecto de remoto a local
+git fork                            Nos hace una copia del proyecto en nuestro perfil/repositorios para poder hacerle lo que queramos sin afectar el proyecto original.
+ssh-keygen -t rsa -b 4096 - C "[correo_github]"  crear llave ssh para configurar email de github 
+pbcopy < ~/.ssh/id_rsa.pub          Copiar llave publica
+ir a perfil de Github, settings, SSH and GPG keys, new ssh key
+
+git remote add origin [url]         Enlazar remoto con local
+git remote -v                       Verificar 
+git remote remove [nombre]          nombre=origin en ejemplo, para borrar
+git fetch origin master             traer cambios del remoto al local
+git merge origin/master   --allow-unrelated-histories          mezclar 
+git pull origin master              traer cambio de remoto a local en un solo paso
+git push origin master              Subir de local a remoto
+git push origin master --tags       enviar tags a remoto
+git push origin [nombre_rama]       Envia a remoto otras ramas
+ 
+ EN Github
+ crear un proyecto por cada feature grande
+
+ touch .gitignore                   crear este archivo, dentro de él se colocan todos los archivos que no queremos tener en cuenta en git
+ 
